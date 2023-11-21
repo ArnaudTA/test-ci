@@ -37,11 +37,30 @@ jobs:
           release-type: node
           default-branch: main
           group-pull-request-title-pattern: release v${version}
-          # extra-files: |
-          #   helm/Chart.yaml
+          extra-files: |
+            helm/Chart.yaml
           #   helm/values.yaml
           token: ${{ secrets.GITHUB_TOKEN }}
-      
+
+      - run: |
+          # Check out the branch that release-please created, if it exists.
+          git fetch
+          git checkout release-please--branches--main--components--console || exit 0
+          # If it does exist, update manifest.json in the PR branch.
+          # release-please can't update it for us yet.  See:
+          # https://github.com/googleapis/release-please/issues/1171
+          VERSION=$(jq -r .version package.json)
+          yq e -i ".version |= \"$VERSION\"" pkgs/a/package.json
+          yq e -i ".version |= \"$VERSION\"" pkgs/b/package.json
+          git add .
+          # Emulate the author of the existing commit (the bot).
+          git config user.email "$(git log -n 1 --format='%ae')"
+          git config user.name "$(git log -n 1 --format='%an')"
+          # Update the PR.
+          git commit --amend --no-edit
+          git push -f
+        if: ${{ ! steps.release.outputs.release_created }}
+
       - name: Tag major and minor versions 
         if: ${{ steps.release.outputs.release_created }}
         run: |
