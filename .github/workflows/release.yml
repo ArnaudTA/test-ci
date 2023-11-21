@@ -37,8 +37,9 @@ jobs:
           release-type: node
           default-branch: main
           group-pull-request-title-pattern: release v${version}
-          # extra-files: |
-          #   helm/Chart.yaml
+          extra-files: |
+            helm/Chart.yaml
+            pkgs/a/package.json
           #   helm/values.yaml
           token: ${{ secrets.GITHUB_TOKEN }}
       
