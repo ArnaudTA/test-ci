@@ -33,7 +33,6 @@ jobs:
         uses: google-github-actions/release-please-action@v3
         id: release
         with:
-          package-name: console
           release-type: node
           default-branch: main
           group-pull-request-title-pattern: release v${version}
