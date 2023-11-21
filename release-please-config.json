@@ -1,0 +1,19 @@
+{
+  "extra-files": [
+    {
+      "type": "json",
+      "path": "package.json",
+      "jsonpath": "$.version"
+    },
+    {
+      "type": "json",
+      "path": "pkgs/a/package.json",
+      "jsonpath": "$.version"
+    },
+    {
+      "type": "json",
+      "path": "pkgs/b/package.json",
+      "jsonpath": "$.version"
+    }
+  ]
+}
