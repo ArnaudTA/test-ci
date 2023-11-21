@@ -1,0 +1,13 @@
+{
+  "packages": {
+    ".": {
+      "release-type": "node"
+    },
+    "pkgs/a/": {
+      "release-type": "node"
+    },
+    "pkgs/b/": {
+      "release-type": "node"
+    }
+  }
+}
