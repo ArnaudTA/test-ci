@@ -1,20 +1,11 @@
 {
-  "packages": {
-    ".": {
-      "release-type": "node",
-      "exclude-paths": [
-        "pkgs/a",
-        "pkgs/b"
-      ]
-    },
-    "pkgs/a": {
-      "release-as": "",
-      "release-type": "node"
-    },
-    "pkgs/b": {
-      "release-as": "",
-      "release-type": "node"
-    }
+  "pkgs/a": {
+    "release-as": "",
+    "release-type": "node"
+  },
+  "pkgs/b": {
+    "release-as": "",
+    "release-type": "node"
   },
   ".": "1.0.0"
 }
