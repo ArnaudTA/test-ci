@@ -1,0 +1,19 @@
+{
+  "packages": {
+    ".": {
+      "release-type": "node",
+      "extra-files": [
+        {
+          "type": "json",
+          "path": "pkgs/a/package.json",
+          "release-type": "$.version"
+        },
+        {
+          "type": "json",
+          "path": "pkgs/b/package.json",
+          "release-type": "$.version"
+        }
+      ]
+    }
+  }
+}
