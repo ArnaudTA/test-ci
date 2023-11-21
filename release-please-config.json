@@ -1,0 +1,26 @@
+{
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+  "packages": {
+    ".": {
+      "release-type": "node",
+      "release-as": "",
+      "extra-files": [
+        {
+          "jsonpath": "$.version",
+          "type": "json",
+          "path": "pkgs/a/package.json"
+        },
+        {
+          "jsonpath": "$.version",
+          "type": "json",
+          "path": "pkgs/b/package.json"
+        },
+        {
+          "type": "yaml",
+          "path": "helm/Chart.yaml",
+          "jsonpath": "$.appVersion"
+        }
+      ]
+    }
+  }
+}
