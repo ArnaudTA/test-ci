@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/ArnaudTA/test-ci/compare/v1.0.0...v1.1.0) (2023-11-21)
+
+
+### Features
+
+* :art: ([83ded8d](https://github.com/ArnaudTA/test-ci/commit/83ded8d16ec2cf59fa1534db4a1fccc02c42a1d7))
+
 ## 1.0.0 (2023-11-21)
 
 
