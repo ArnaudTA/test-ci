@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/ArnaudTA/test-ci/compare/v1.1.0...v2.0.0) (2023-11-22)
+
+
+### ⚠ BREAKING CHANGES
+
+* :bug: uydfvdk
+
+### Features
+
+* :bug: uydfvdk ([7135f92](https://github.com/ArnaudTA/test-ci/commit/7135f925d8c8b024d9bf6ff271697cfa4fd3fffb))
+
 ## [1.1.0](https://github.com/ArnaudTA/test-ci/compare/v1.0.0...v1.1.0) (2023-11-21)
 
 
